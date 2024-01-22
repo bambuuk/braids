@@ -1,0 +1,18 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon/facebook" filter="url(#filter0_d_1912_689)">
+<rect x="4.5" y="2.5" width="31" height="31" rx="5.5" stroke="#FFBE42" stroke-miterlimit="0" stroke-linejoin="bevel" shape-rendering="crispEdges"/>
+<path id="Vector" d="M12.779 15.264V20.5973H16.779V29.9307H22.1123V20.5973H26.1123L27.4457 15.264H22.1123V12.5973C22.1123 12.2437 22.2528 11.9046 22.5028 11.6545C22.7529 11.4045 23.092 11.264 23.4457 11.264H27.4457V5.93066H23.4457C21.6775 5.93066 19.9819 6.63304 18.7316 7.88329C17.4814 9.13353 16.779 10.8292 16.779 12.5973V15.264H12.779Z" stroke="#1F0B0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_d_1912_689" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1912_689"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1912_689" result="shape"/>
+</filter>
+</defs>
+</svg>

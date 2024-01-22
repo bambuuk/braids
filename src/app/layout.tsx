@@ -3,8 +3,8 @@ import { outfit, raleway } from "@/assets/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Braids Space",
-  description: "Braids",
+  title: "Braid Space",
+  description: "Braids for you",
 };
 
 export default function RootLayout({
