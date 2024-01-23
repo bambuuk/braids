@@ -1,6 +1,7 @@
 export const HoverUnderline = () => {
   return (
-    <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] transition-all ease-in-out duration-275 h-0.5">
+    <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
+    transition-all ease-in-out duration-275 h-0.5">
     </span>
   )
 }
