@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Main = () => {
   return (
-    <section className="w-full" id="main">
+    <section className="w-full overflow-hidden" id="main">
       <div className="relative pt-[40px] max-w-[1240px] w-full m-auto px-[16px] sm:[25px] md:px-[50px] xl:px-0">
         <Image
           src='/ill-stars.png'
