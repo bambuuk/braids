@@ -14,10 +14,9 @@ interface TeammateProps {
 }
 
 const Teammate = ({ teammate, position }: TeammateProps) => {
-  console.log(typeof position)
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-[16px] sm:gap-5 rounded-[20px] hover:bg-[#1F0B0B]
-    transition-all ease-in-out group duration-500 max-w-[820px] w-full mx-auto lg:mx-0">
+    transition-all ease-in-out group duration-500 max-w-[820px] w-full">
       <Image
         src={teammate.mainPhoto}
         alt={teammate.name}
