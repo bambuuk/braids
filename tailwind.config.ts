@@ -7,6 +7,15 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    animation: {
+      "run-row": "run 10s linear infinite",
+    },
+    keyframes: {
+      run: {
+        "0%": {},
+        "100%": { transform: "translateX(-50%)" },
+      },
+    },
     screens: {
       sm: "576px",
       md: "768px",
