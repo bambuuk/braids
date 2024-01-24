@@ -1,4 +1,5 @@
-import Image from "next/image"
+import Teammate from "./Teammate";
+import { team } from "@/assets/data";
 
 const OurTeam = () => {
   return (
@@ -9,33 +10,7 @@ const OurTeam = () => {
             Our Team
           </h2>
 
-          <div className="flex gap-5 col-start-2 col-end-4">
-            <Image
-              src='/ourTeam/mariia.png'
-              alt='Employee Mariia'
-              width={400}
-              height={353}
-            />
-
-            <div>
-              <div>
-                <span>Maria, </span>
-                <span>7 years of experience</span>
-              </div>
-
-              <div>
-                <span>dekosi</span>
-                <span>afro braid</span>
-                <span>zizi</span>
-              </div>
-
-              <div>
-                Works:
-              </div>
-
-              <div>Slider</div>
-            </div>
-          </div>
+          <Teammate teammate={team[0]} />
         </div>
       </div>
     </section>
