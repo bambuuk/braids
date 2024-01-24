@@ -1,5 +1,6 @@
 import Slider from "./Slider";
 import Image from "next/image";
+import clsx from 'clsx';
 
 interface TeammateProps {
   teammate: {
@@ -8,13 +9,15 @@ interface TeammateProps {
     tags: string[];
     photos: string[];
     mainPhoto: string;
-  }
+  },
+  position: string;
 }
 
-const Teammate = ({ teammate }: TeammateProps) => {
+const Teammate = ({ teammate, position }: TeammateProps) => {
+  console.log(typeof position)
   return (
-    <div className="flex gap-5 col-start-2 col-end-4 rounded-[20px] hover:bg-[#1F0B0B] 
-    transition-all ease-in-out group duration-500">
+    <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-[16px] sm:gap-5 rounded-[20px] hover:bg-[#1F0B0B]
+    transition-all ease-in-out group duration-500 max-w-[820px] w-full mx-auto lg:mx-0">
       <Image
         src={teammate.mainPhoto}
         alt={teammate.name}
@@ -23,7 +26,7 @@ const Teammate = ({ teammate }: TeammateProps) => {
       />
 
       <div className="text-[#1F0B0B] font-outfit text-base font-normal group-hover:text-[#EEE]
-      py-5 flex flex-col gap-[15px] max-h-[353px] h-full max-w-[820px] w-full">
+      py-[16px] sm:py-5 flex flex-col gap-[15px] max-h-[353px] h-full max-w-[820px] w-full">
         <div>
           <span className="text-[20px] font-semibold leading-5">
             {teammate.name},&nbsp;
