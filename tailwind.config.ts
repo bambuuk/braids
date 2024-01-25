@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     animation: {
-      "run-row": "run 10s linear infinite",
+      "run-row": "run 15s linear infinite",
     },
     keyframes: {
       run: {
