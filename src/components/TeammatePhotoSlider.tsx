@@ -8,7 +8,7 @@ interface SliderProps {
   photos: string[];
 }
 
-const Slider = ({ photos }: SliderProps) => {
+const TeammatePhotoSlider = ({ photos }: SliderProps) => {
   const { isSmallTablet } = useMediaQuery();
 
   return (
@@ -35,4 +35,4 @@ const Slider = ({ photos }: SliderProps) => {
   )
 }
 
-export default Slider
+export default TeammatePhotoSlider

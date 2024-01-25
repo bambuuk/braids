@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Main from "@/components/Main";
 import OurTeam from "@/components/OurTeam";
+import Price from "@/components/Price";
 import RunningRow from "@/components/RunningRow";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <Main />
         <OurTeam />
         <RunningRow />
+        <Price />
       </main>
     </>
   );

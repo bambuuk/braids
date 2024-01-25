@@ -1,4 +1,4 @@
-import Slider from "./Slider";
+import TeammatePhotoSlider from "./TeammatePhotoSlider";
 import Image from "next/image";
 import clsx from 'clsx';
 
@@ -9,11 +9,10 @@ interface TeammateProps {
     tags: string[];
     photos: string[];
     mainPhoto: string;
-  },
-  position: string;
+  }
 }
 
-const Teammate = ({ teammate, position }: TeammateProps) => {
+const Teammate = ({ teammate }: TeammateProps) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-[16px] sm:gap-5 rounded-[20px] hover:bg-[#1F0B0B]
     transition-all ease-in-out group duration-500 max-w-[820px] w-full">
@@ -46,7 +45,7 @@ const Teammate = ({ teammate, position }: TeammateProps) => {
           Works:
         </div>
 
-        <Slider photos={teammate.photos} />
+        <TeammatePhotoSlider photos={teammate.photos} />
       </div>
     </div>
   )

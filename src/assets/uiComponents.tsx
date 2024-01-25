@@ -97,3 +97,34 @@ export const BurgerMenu = () => {
     </svg>
   )
 }
+
+export const PlusIcon = () => {
+  return (
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
+      <g id="Icon +">
+        <rect width="30" height="30" rx="15" fill="#EEEEEE" />
+        <path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M15.75 6.25C15.75 5.83579 15.4142 5.5 15 5.5C14.5858 5.5 14.25 5.83579 14.25 6.25V14.25H6.25C5.83579 14.25 5.5 14.5858 5.5 15C5.5 15.4142 5.83579 15.75 6.25 15.75H14.25V23.75C14.25 24.1642 14.5858 24.5 15 24.5C15.4142 24.5 15.75 24.1642 15.75 23.75V15.75H23.75C24.1642 15.75 24.5 15.4142 24.5 15C24.5 14.5858 24.1642 14.25 23.75 14.25H15.75V6.25Z" fill="#1F0B0B" className="group-hover:fill-[#ffbe42]" />
+      </g>
+    </svg>
+  )
+}
+
+export const LeftArrow = () => {
+  return (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
+      <g id="left">
+        <path id="Vector" d="M20.2939 8L12.2939 16L20.2939 24" stroke="#1F0B0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+    </svg>
+  )
+}
+
+export const RightArrow = () => {
+  return (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
+      <g id="right">
+        <path id="Vector" d="M12.2246 8L20.2246 16L12.2246 24" stroke="#1F0B0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+    </svg>
+  )
+}
