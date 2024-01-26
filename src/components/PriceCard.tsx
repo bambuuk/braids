@@ -1,9 +1,14 @@
 'use client'
 import clsx from "clsx";
-import Image from "next/image"
-import { MouseEventHandler, useState } from "react"
+import Image from "next/image";
+import { MouseEventHandler, useState } from "react";
+import { Price } from "@/assets/types";
 
-const PriceCard = () => {
+interface PriceCardProps {
+  priceInfo: Price;
+}
+
+const PriceCard = ({ priceInfo }: PriceCardProps) => {
   const [isPhotoActive, setIsPhotoActive] = useState(false);
 
   const togglePhotoActive: MouseEventHandler<SVGSVGElement | HTMLImageElement> = () => {
@@ -15,24 +20,24 @@ const PriceCard = () => {
   }
 
   return (
-    <div className="relative max-w-[400px] w-full min-h-[467px] h-full rounded-[10px]
+    <div className="max-w-[400px] w-full h-full rounded-[10px]
     hover:bg-[#1F0B0B] transition-all ease-in-out duration-700 group">
       <div className={clsx(
-        `absolute flex flex-col gap-[16px] sm:gap-5 p-[16px] sm:p-[30px] w-full h-full rounded-[10px]
+        `flex flex-col gap-[16px] sm:gap-5 p-[16px] sm:p-[30px] w-full h-full rounded-[10px]
         transition-opacity ease-in-out duration-500`,
         {
           'opacity-100 visible': isPhotoActive === false,
           'opacity-0 invisible': isPhotoActive === true,
         }
       )}>
-        <div className="relative">
+        <div className="flex justify-between items-center">
           <span
-            className="absolute top-[8px] left-0 text-[#1F0B0B] text-outfit text-[20px] leading-[100%] font-semibold
+            className="text-[#1F0B0B] text-outfit text-[20px] leading-[100%] font-semibold
                 group-hover:text-[#EEE] transition-all ease-in-out duration-700"
           >
-            ZiZi
+            {priceInfo.title}
           </span>
-          <div className="w-[30px] h-[30px] absolute top-0 right-0">
+          <div className="w-[30px] h-[30px]">
             <svg
               width="30"
               height="30"
@@ -60,43 +65,37 @@ const PriceCard = () => {
           </div>
         </div>
 
-        <p className="mt-[20px] text-[#1F0B0B] text-outfit text-sm sm:text-base font-normal group-hover:text-[#EEE] 
+        <p className="mt-[30px] text-[#1F0B0B] text-outfit text-sm sm:text-base font-normal group-hover:text-[#EEE] 
             transition-all ease-in-out duration-700">
-          Classic Afro braids are a comfortable, practical, and stylish hairstyle that is easy
-          to maintain. These braids are woven into hair starting from a length of 5 cm, using
-          Kanekalon or thread weaving. Kanekalon, artificial hair, is used for braiding classic
-          Afro braids.
+          {priceInfo.firstDescription}
         </p>
 
         <p className="text-[#1F0B0B] text-outfit text-sm sm:text-base font-normal group-hover:text-[#EEE]
-            transition-all ease-in-out duration-700">
-          Prices vary based on the
-          number of braids and length (excluding materials). The braiding time for Afro
-          braids ranges from 6 to 8 hours. The duration of wearing classic Afro braids
-          is approximately 1.5-2 months.
+            transition-all ease-in-out duration-700 flex-1">
+          {priceInfo.secondDescription}
         </p>
 
         <p className="flex text-[#1F0B0B] text-outfit text-sm sm:text-base font-normal">
           <span className="font-semibold group-hover:text-[#EEE] transition-all ease-in-out duration-700">
             Price:&nbsp;
           </span>
-          <span className="text-[#FFBE42] underline">2000 - 2800 UAH</span>
+          <span className="text-[#FFBE42] underline">{priceInfo.price}</span>
         </p>
       </div>
 
       <div className={clsx(
-        "absolute w-full h-full rounded-[10px] transition-opacity ease-in-out duration-500",
+        "w-full h-full rounded-[10px] transition-opacity ease-in-out duration-500",
         {
           'opacity-100 visible': isPhotoActive === true,
           'opacity-0 invisible': isPhotoActive === false,
         }
       )}>
         <Image
-          src='/braidExamples/afro-braid.png'
+          src={priceInfo.img}
           alt="Afro"
           width={400}
           height={467}
-          className="w-full h-full object-cover"
+          className="absolute top-0 right-0 w-full h-full object-cover rounded-[10px]"
         />
         <Image
           src='/icons/minus.svg'

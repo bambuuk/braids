@@ -113,7 +113,7 @@ export const LeftArrow = () => {
   return (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
       <g id="left">
-        <path id="Vector" d="M20.2939 8L12.2939 16L20.2939 24" stroke="#1F0B0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path id="Vector" d="M20.2939 8L12.2939 16L20.2939 24" stroke="#1F0B0B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </g>
     </svg>
   )
@@ -123,7 +123,7 @@ export const RightArrow = () => {
   return (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
       <g id="right">
-        <path id="Vector" d="M12.2246 8L20.2246 16L12.2246 24" stroke="#1F0B0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path id="Vector" d="M12.2246 8L20.2246 16L12.2246 24" stroke="#1F0B0B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </g>
     </svg>
   )

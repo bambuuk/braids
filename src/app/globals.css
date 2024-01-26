@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 :root {
   --background-page: #eeeeee;
@@ -24,4 +26,11 @@ html {
 
 .social__header-link:hover svg rect {
   fill: #b7b7b7;
+}
+
+.swiper-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr;
 }
