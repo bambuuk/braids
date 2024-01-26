@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {
-  HoverUnderline,
   HeaderTiktokIcon,
   HeaderInstagramIcon,
   HeaderFacebookIcon,
@@ -17,41 +16,53 @@ const Header = () => {
           </div>
 
           <nav className="hidden lg:block">
-            <ul className="flex gap-[40px] text-base text-[#1F0B0B] font-outfit font-normal cursor-pointer">
+            <ul className="flex gap-[40px] text-base text-[#1F0B0B] font-outfit font-normal">
               <li>
-                <Link href="#main" className="group">
+                <Link href="#main" className="group cursor-pointer">
                   Main
-                  <HoverUnderline />
+                  <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
+                  transition-all ease-in-out duration-275 h-0.5">
+                  </span>
                 </Link>
               </li>
               <li>
-                <Link href="#team" className="group">
+                <Link href="#team" className="group cursor-pointer">
                   Team
-                  <HoverUnderline />
+                  <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
+                  transition-all ease-in-out duration-275 h-0.5">
+                  </span>
                 </Link>
               </li>
               <li>
-                <Link href="#price" className="group">
+                <Link href="#price" className="group cursor-pointer">
                   Price
-                  <HoverUnderline />
+                  <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
+                  transition-all ease-in-out duration-275 h-0.5">
+                  </span>
                 </Link>
               </li>
               <li>
-                <Link href="#reviews" className="group">
+                <Link href="#reviews" className="group cursor-pointer">
                   Reviews
-                  <HoverUnderline />
+                  <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
+                  transition-all ease-in-out duration-275 h-0.5">
+                  </span>
                 </Link>
               </li>
               <li>
-                <Link href="#faq" className="group">
+                <Link href="#faq" className="group cursor-pointer">
                   FAQ
-                  <HoverUnderline />
+                  <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
+                  transition-all ease-in-out duration-275 h-0.5">
+                  </span>
                 </Link>
               </li>
               <li>
-                <Link href="#contacts" className="group">
+                <Link href="#contacts" className="group cursor-pointer">
                   Contacts
-                  <HoverUnderline />
+                  <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
+                  transition-all ease-in-out duration-275 h-0.5">
+                  </span>
                 </Link>
               </li>
             </ul>
