@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Main = () => {
   return (
-    <section className="w-full overflow-hidden" id="main">
+    <div className="w-full overflow-hidden" id="main">
       <div className="relative pt-[40px] max-w-[1240px] w-full m-auto px-[16px] sm:[25px] md:px-[50px] xl:px-0">
         <Image
           src='/ill-stars.png'
@@ -11,7 +11,7 @@ const Main = () => {
           height={49}
           className="absolute top-[130px] hidden lg:block"
         />
-        <h1 className="w-full text-[#1F0B0B] font-outfit text-[75px] sm:text-[150px] md:text-[215px] bmd:text-[250px] 
+        <div className="w-full text-[#1F0B0B] font-outfit text-[75px] sm:text-[150px] md:text-[215px] bmd:text-[250px] 
         lg:text-[280px] xl:text-[320px] 2xl:[376px] font-black leading-[100%] lg:leading-[80%] 
         text-start md:text-center">
           Braids
@@ -32,20 +32,20 @@ const Main = () => {
             </span>
 
             <div className="lg:absolute lg:bottom-3 flex justify-between flex-col sm:flex-row lg:flex-col gap-5
-            col-start-1 col-end-3 lg:col-auto mt-[184px] sm:mt-[50px] lg:mt-0">
+            col-start-1 col-end-4 sm:col-end-3 lg:col-auto mx-auto mt-[184px] sm:mt-[50px] lg:mt-0 max-w-[320px] sm:max-w-none w-full">
               <p className="text-[#1F0B0B] font-outfit text-sm sm:text-xl leading-[150%] sm:leading-[30px] 
-              font-normal text-left max-w-[295px] w-full">
+              font-normal text-left sm:max-w-[295px] w-full">
                 Need advice or want to book an appointment?
                 Fill in the minimum information, and we will get in touch with you.
               </p>
               <button className="flex justify-center items-center rounded-[20px] bg-[#FFBE42]
               text-[#1F0B0B] font-outfit text-base sm:text-xl font-semibold leading-[150%] sm:leading-5 
-              max-w-[295px] w-full h-[60px]">
+              sm:max-w-[295px] w-full h-[60px]">
                 Order a call
               </button>
             </div>
           </div>
-        </h1>
+        </div>
         <Image
           src='/ill-stars.png'
           alt='stars'
@@ -54,7 +54,7 @@ const Main = () => {
           className="absolute bottom-[40%] right-[40%] lg:bottom-[32px] lg:right-[203px]"
         />
       </div>
-    </section>
+    </div>
   )
 }
 
