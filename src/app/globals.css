@@ -27,3 +27,7 @@ html {
 .social__header-link:hover svg rect {
   fill: #b7b7b7;
 }
+
+.swiper-button-disabled svg path {
+  stroke-width: 1.5;
+}
