@@ -45,7 +45,9 @@ const Teammate = ({ teammate }: TeammateProps) => {
           Works:
         </div>
 
-        <TeammatePhotoSlider photos={teammate.photos} />
+        <div className="flex max-w-[400px]">
+          <TeammatePhotoSlider photos={teammate.photos} />
+        </div>
       </div>
     </div>
   )

@@ -13,9 +13,10 @@ const TeammatePhotoSlider = ({ photos }: SliderProps) => {
 
   return (
     <Swiper
-      slidesPerView={!isSmallTablet ? 1.5 : 2}
+      slidesPerView={2}
       spaceBetween={20}
-      className="max-w-[400px] w-full h-full"
+      speed={300}
+      className="sm:max-w-[400px] w-full h-full"
     >
       {photos.map((item, index) => (
         <SwiperSlide
@@ -27,7 +28,7 @@ const TeammatePhotoSlider = ({ photos }: SliderProps) => {
             alt="Teammate's work"
             width={190}
             height={190}
-            className="block max-w-[190px] max-h-[190px] w-full h-full object-cover rounded-[10px] select-none"
+            className="block max-w-[190px] max-h-[190px] w-full h-full object-cover rounded-[10px] select-none mx-auto"
           />
         </SwiperSlide>
       ))}
