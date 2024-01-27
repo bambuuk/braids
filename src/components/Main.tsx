@@ -40,7 +40,8 @@ const Main = () => {
               </p>
               <button className="flex justify-center items-center rounded-[20px] bg-[#FFBE42]
               text-[#1F0B0B] font-outfit text-base sm:text-xl font-semibold leading-[150%] sm:leading-5 
-              sm:max-w-[295px] w-full h-[60px]">
+              sm:max-w-[295px] w-full h-[60px] border-2 border-solid border-transparent hover:border-[#FFBE42] 
+              hover:bg-transparent transition-all ease-in-out">
                 Order a call
               </button>
             </div>
