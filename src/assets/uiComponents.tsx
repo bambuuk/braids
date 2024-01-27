@@ -112,7 +112,7 @@ export const PlusIcon = () => {
 export const LeftArrow = () => {
   return (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20.2939 8L12.2939 16L20.2939 24" stroke="#1F0B0B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M20.2939 8L12.2939 16L20.2939 24" stroke="#1F0B0B" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }
@@ -120,7 +120,7 @@ export const LeftArrow = () => {
 export const RightArrow = () => {
   return (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12.2246 8L20.2246 16L12.2246 24" stroke="#1F0B0B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M12.2246 8L20.2246 16L12.2246 24" stroke="#1F0B0B" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }
