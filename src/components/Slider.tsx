@@ -1,11 +1,10 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Slider from "react-slick";
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { Navigation } from 'swiper/modules';
 import { Price } from '@/assets/types';
-import 'swiper/css/navigation';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import { LeftArrow, RightArrow } from '@/assets/uiComponents';
 
 interface SliderProps {
@@ -14,39 +13,30 @@ interface SliderProps {
 }
 
 const GeneralSlider = ({ data, component }: SliderProps) => {
-  const { isSmallTablet } = useMediaQuery();
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1
-  };
+  const { isTablet, isSmallTablet } = useMediaQuery();
 
   return (
     <Swiper
-      slidesPerView={2}
-      spaceBetween={20}
+      slidesPerView={isSmallTablet ? 2 : 1}
+      spaceBetween={isTablet ? 20 : 5}
       speed={300}
       modules={[Navigation]}
       navigation={{
         prevEl: '.prevBtn',
         nextEl: '.nextBtn',
       }}
-      grabCursor
-      className="w-full h-full grid justify-end overflow-hidden"
+      className=''
     >
-      <div className='swiper-wrapper grid grid-cols-2'>
-        {data.map((item, i) => (
-          <SwiperSlide
-            className="bg-transparent h-full"
-            key={i}
-          >
-            {component(item)}
-          </SwiperSlide>
-        ))}
-      </div>
-      <div className='mt-5 flex gap-[50px] justify-end'>
+      {data.map((item, i) => (
+        <SwiperSlide
+          key={i}
+          className='mb-[52px]'
+        >
+          {component(item)}
+        </SwiperSlide>
+      ))}
+
+      <div className='absolute bottom-0 right-0 z-[10000000000] flex gap-[50px]'>
         <button className="prevBtn">
           <LeftArrow />
         </button>
@@ -55,19 +45,6 @@ const GeneralSlider = ({ data, component }: SliderProps) => {
         </button>
       </div>
     </Swiper>
-
-    // <div>
-    //   <Slider {...settings}>
-    //     {data.map((item, i) => (
-    //       <div
-    //         className="bg-transparent h-full"
-    //         key={i}
-    //       >
-    //         {component(item)}
-    //       </div>
-    //     ))}
-    //   </Slider>
-    // </div>
   )
 }
 
