@@ -35,6 +35,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    mytheme: {
+      primary: "#EEE",
+      secondary: "#1F0B0B",
+      error: "#FF8484",
+    },
   },
   plugins: [require("daisyui")],
 };
