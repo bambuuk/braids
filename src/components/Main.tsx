@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const Main = () => {
   return (
@@ -39,15 +38,14 @@ const Main = () => {
                 Need advice or want to book an appointment?
                 Fill in the minimum information, and we will get in touch with you.
               </p>
-              <Link
-                href={'#call-action'}
+              <button
                 className="flex justify-center items-center rounded-[20px] bg-[#FFBE42]
               text-[#1F0B0B] font-outfit text-base sm:text-xl font-semibold leading-[150%] sm:leading-5
               sm:max-w-[295px] w-full h-[60px] border-2 border-solid border-transparent hover:border-[#FFBE42]
               hover:bg-transparent transition-all ease-in-out"
               >
                 Order a call
-              </Link>
+              </button>
             </div>
           </div>
         </div>
