@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Main = () => {
   return (
-    <div className="w-full overflow-hidden" id="main">
+    <div id="main" className="w-full overflow-hidden">
       <div className="relative pt-[40px] max-w-[1240px] w-full m-auto px-[16px] sm:[25px] md:px-[50px] xl:px-0">
         <Image
           src='/ill-stars.png'
@@ -38,12 +39,15 @@ const Main = () => {
                 Need advice or want to book an appointment?
                 Fill in the minimum information, and we will get in touch with you.
               </p>
-              <button className="flex justify-center items-center rounded-[20px] bg-[#FFBE42]
-              text-[#1F0B0B] font-outfit text-base sm:text-xl font-semibold leading-[150%] sm:leading-5 
-              sm:max-w-[295px] w-full h-[60px] border-2 border-solid border-transparent hover:border-[#FFBE42] 
-              hover:bg-transparent transition-all ease-in-out">
+              <Link
+                href={'#call-action'}
+                className="flex justify-center items-center rounded-[20px] bg-[#FFBE42]
+              text-[#1F0B0B] font-outfit text-base sm:text-xl font-semibold leading-[150%] sm:leading-5
+              sm:max-w-[295px] w-full h-[60px] border-2 border-solid border-transparent hover:border-[#FFBE42]
+              hover:bg-transparent transition-all ease-in-out"
+              >
                 Order a call
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -55,7 +59,7 @@ const Main = () => {
           className="absolute bottom-[40%] right-[40%] lg:bottom-[32px] lg:right-[203px]"
         />
       </div>
-    </div>
+    </div >
   )
 }
 

@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import {
   HeaderTiktokIcon,
@@ -5,10 +6,11 @@ import {
   HeaderFacebookIcon,
   BurgerMenu
 } from "@/assets/uiComponents";
+import { scrollToSection } from "@/utils/scrollToSection";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 w-full border-b border-solid border-[#1F0B0B] bg-[#EEE] z-50">
+    <header id="header" className="fixed top-0 w-full border-b border-solid border-[#1F0B0B] bg-[#EEE] z-50">
       <div className="max-w-[1240px] m-auto py-5 px-[40px] xl:px-0">
         <div className="flex justify-between items-center h-[48px] w-full">
           <div className="text-[#1F0B0B] font-outfit text-2xl font-black">
@@ -18,52 +20,52 @@ const Header = () => {
           <nav className="hidden lg:block">
             <ul className="flex gap-[40px] text-base text-[#1F0B0B] font-outfit font-normal">
               <li>
-                <Link href="#main" className="group cursor-pointer">
+                <button className="group cursor-pointer" onClick={() => scrollToSection('main')}>
                   Main
                   <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
                   transition-all ease-in-out duration-275 h-0.5">
                   </span>
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#team" className="group cursor-pointer">
+                <button className="group cursor-pointer" onClick={() => scrollToSection('team')}>
                   Team
                   <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
                   transition-all ease-in-out duration-275 h-0.5">
                   </span>
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#price" className="group cursor-pointer">
+                <button className="group cursor-pointer" onClick={() => scrollToSection('price')}>
                   Price
                   <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
                   transition-all ease-in-out duration-275 h-0.5">
                   </span>
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#reviews" className="group cursor-pointer">
+                <button className="group cursor-pointer" onClick={() => scrollToSection('reviews')}>
                   Reviews
                   <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
                   transition-all ease-in-out duration-275 h-0.5">
                   </span>
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#faq" className="group cursor-pointer">
+                <button className="group cursor-pointer" onClick={() => scrollToSection('faq')}>
                   FAQ
                   <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
                   transition-all ease-in-out duration-275 h-0.5">
                   </span>
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#contacts" className="group cursor-pointer">
+                <button className="group cursor-pointer" onClick={() => scrollToSection('contacts')}>
                   Contacts
                   <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
                   transition-all ease-in-out duration-275 h-0.5">
                   </span>
-                </Link>
+                </button>
               </li>
             </ul>
           </nav>

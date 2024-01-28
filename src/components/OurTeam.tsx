@@ -3,7 +3,7 @@ import { team } from "@/assets/data";
 
 const OurTeam = () => {
   return (
-    <section className="w-full mt-[80px] sm:mt-[100px] lg:mt-[160px]">
+    <section id="team" className="w-full mt-[80px] sm:mt-[100px] lg:mt-[160px]">
       <div className="max-w-[1240px] w-full m-auto px-[16px] sm:[25px] md:px-[50px] xl:px-0">
         <div className="flex flex-col gap-[40px] md:gap-[70px] lg:gap-[50px]">
           <div className="flex flex-col gap-[40px] lg:gap-[40px] lg:flex-row lg:justify-between">

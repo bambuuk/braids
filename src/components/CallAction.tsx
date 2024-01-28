@@ -2,7 +2,7 @@ import CallActionForm from "./CallActionForm";
 
 const CallAction = () => {
   return (
-    <section className="bg-[#1F0B0B] mt-[80px] sm:mt-[100px] bmd:mt-[150px]">
+    <section id="call-action" className="bg-[#1F0B0B] mt-[80px] sm:mt-[100px] bmd:mt-[150px]">
       <div className="max-w-[1240px] w-full h-full m-auto px-[16px] sm:[25px] md:px-[50px] xl:px-0">
         <div className="flex flex-col bmd:flex-row bmd:justify-center items-center gap-[40px] sm:gap-[70px] 
         bmd:gap-[125px] xl:gap-[200px] w-full py-[40px] sm:py-[70px]">
