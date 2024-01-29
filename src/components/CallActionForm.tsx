@@ -1,29 +1,18 @@
 'use client';
 
-import { MouseEvent, useRef } from "react";
 import SuccessCallPopup from "./SuccessCallPopup";
+import useSuccessPopupControl from "@/hooks/useSuccessPopupControl";
 
 const CallActionForm = () => {
-  const isOpenSuccessPopup = useRef(false);
-  let timeoutId: ReturnType<typeof setTimeout>;
+  const {
+    isOpenSuccessPopup,
+    handleOpenSuccessPopup,
+    handleCloseSuccessPopup,
+  } = useSuccessPopupControl();
 
   const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
-    (document.getElementById('success-call-order') as HTMLDialogElement).showModal();
-    isOpenSuccessPopup.current = true;
-
-    if (isOpenSuccessPopup.current) {
-      timeoutId = setTimeout(() => {
-        (document.getElementById('success-call-order') as HTMLDialogElement).close();
-      }, 3000);
-    }
-  }
-
-  const handleClose = (e: MouseEvent<HTMLButtonElement | HTMLDialogElement>) => {
-    if (e.target === e.currentTarget) {
-      (document.getElementById('success-call-order') as HTMLDialogElement).close();
-      clearTimeout(timeoutId)
-    }
+    handleOpenSuccessPopup(e);
   }
 
   return (
@@ -69,7 +58,7 @@ const CallActionForm = () => {
           </button>
         </fieldset>
       </form>
-      <SuccessCallPopup handleClose={handleClose} />
+      <SuccessCallPopup handleClose={handleCloseSuccessPopup} isOpenPopup={isOpenSuccessPopup} />
     </>
   )
 }

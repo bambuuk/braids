@@ -2,13 +2,13 @@ import Image from "next/image"
 import { MouseEvent } from "react";
 
 interface SuccessCallPopupProps {
-  handleClose: (e: MouseEvent<HTMLButtonElement | HTMLDialogElement>) => void
+  handleClose: (e: MouseEvent<HTMLButtonElement | HTMLDialogElement>) => void;
+  isOpenPopup: boolean;
 }
 
-const SuccessCallPopup = ({ handleClose }: SuccessCallPopupProps) => {
-
+const SuccessCallPopup = ({ handleClose, isOpenPopup }: SuccessCallPopupProps) => {
   return (
-    <dialog id="success-call-order" className="modal h-full" onClick={handleClose}>
+    <dialog id="success-call-order" className='modal h-full' onClick={handleClose}>
       <div className="modal-box p-[60px] bg-[#1F0B0B]">
         <button
           onClick={handleClose}

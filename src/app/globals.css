@@ -2,21 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background-page: #eeeeee;
-}
-
-body {
-  background: var(--background-page);
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 .social__header-link svg rect {
   transition: all 0.2s linear;
   fill: #eee;
