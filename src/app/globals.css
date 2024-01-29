@@ -14,3 +14,7 @@
 .swiper-button-disabled svg path {
   stroke-width: 1.5;
 }
+
+.fullWidth {
+  padding-left: calc(100vw - 100%);
+}

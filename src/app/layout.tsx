@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { outfit, raleway } from "@/assets/fonts";
 import "./globals.css";
-import { fullWidthClassName } from "react-remove-scroll-bar";
 import clsx from "clsx";
 
 export const metadata: Metadata = {

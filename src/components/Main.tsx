@@ -1,6 +1,13 @@
+'use client';
 import Image from "next/image";
+import CallActionPopup from "./CallActionPopup";
+import useCallPopupControl from "@/hooks/useCallPopupControl";
 
 const Main = () => {
+  const {
+    handleOpenCallPopup,
+    handleCloseCallPopup,
+  } = useCallPopupControl();
   return (
     <div id="main" className="w-full overflow-hidden">
       <div className="relative pt-[40px] max-w-[1240px] w-full m-auto px-[16px] sm:[25px] md:px-[50px] xl:px-0">
@@ -39,6 +46,7 @@ const Main = () => {
                 Fill in the minimum information, and we will get in touch with you.
               </p>
               <button
+                onClick={handleOpenCallPopup}
                 className="flex justify-center items-center rounded-[20px] bg-[#FFBE42]
               text-[#1F0B0B] font-outfit text-base sm:text-xl font-semibold leading-[150%] sm:leading-5
               sm:max-w-[295px] w-full h-[60px] border-2 border-solid border-transparent hover:border-[#FFBE42]
@@ -49,6 +57,7 @@ const Main = () => {
             </div>
           </div>
         </div>
+        <CallActionPopup handleClose={handleCloseCallPopup} />
         <Image
           src='/ill-stars.png'
           alt='stars'

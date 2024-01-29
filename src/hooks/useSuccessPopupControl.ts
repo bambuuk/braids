@@ -1,4 +1,3 @@
-import { getScrollWidth } from "@/utils/getScrollWidth";
 import { MouseEvent, useState } from "react";
 
 const useSuccessPopupControl = () => {
@@ -10,32 +9,27 @@ const useSuccessPopupControl = () => {
       document.getElementById("success-call-order") as HTMLDialogElement
     ).showModal();
     setIsOpenSuccessPopup(true);
-    const scrollBarWidth = getScrollWidth();
-    document.body.style.marginRight = `${scrollBarWidth}px`;
 
-    if (isOpenSuccessPopup) {
-      timeoutId = setTimeout(() => {
-        setIsOpenSuccessPopup(false);
-        document.body.style.overflow = "auto";
-        document.body.style.marginRight = "";
-        (
-          document.getElementById("success-call-order") as HTMLDialogElement
-        ).close();
-      }, 3000);
-    }
+    timeoutId = setTimeout(() => {
+      setIsOpenSuccessPopup(false);
+      (
+        document.getElementById("success-call-order") as HTMLDialogElement
+      ).close();
+    }, 3000);
   };
 
   const handleCloseSuccessPopup = (
     e: MouseEvent<HTMLButtonElement | HTMLDialogElement>
   ) => {
+    const header = document.querySelector("header") as HTMLElement;
+    const callAction = document.querySelector("#call-action") as HTMLElement;
+
     if (e.target === e.currentTarget) {
       (
         document.getElementById("success-call-order") as HTMLDialogElement
       ).close();
       clearTimeout(timeoutId);
       setIsOpenSuccessPopup(false);
-      document.body.style.overflow = "auto";
-      document.body.style.marginRight = "";
     }
   };
 

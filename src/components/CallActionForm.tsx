@@ -5,7 +5,6 @@ import useSuccessPopupControl from "@/hooks/useSuccessPopupControl";
 
 const CallActionForm = () => {
   const {
-    isOpenSuccessPopup,
     handleOpenSuccessPopup,
     handleCloseSuccessPopup,
   } = useSuccessPopupControl();
@@ -58,7 +57,7 @@ const CallActionForm = () => {
           </button>
         </fieldset>
       </form>
-      <SuccessCallPopup handleClose={handleCloseSuccessPopup} isOpenPopup={isOpenSuccessPopup} />
+      <SuccessCallPopup handleClose={handleCloseSuccessPopup} />
     </>
   )
 }

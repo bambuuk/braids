@@ -3,10 +3,9 @@ import { MouseEvent } from "react";
 
 interface SuccessCallPopupProps {
   handleClose: (e: MouseEvent<HTMLButtonElement | HTMLDialogElement>) => void;
-  isOpenPopup: boolean;
 }
 
-const SuccessCallPopup = ({ handleClose, isOpenPopup }: SuccessCallPopupProps) => {
+const SuccessCallPopup = ({ handleClose }: SuccessCallPopupProps) => {
   return (
     <dialog id="success-call-order" className='modal h-full' onClick={handleClose}>
       <div className="modal-box p-[60px] bg-[#1F0B0B]">
