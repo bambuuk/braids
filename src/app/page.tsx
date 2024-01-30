@@ -1,4 +1,5 @@
 import CallAction from "@/components/CallAction";
+import FAQ from "@/components/FAQ";
 import Header from "@/components/Header";
 import Main from "@/components/Main";
 import OurTeam from "@/components/OurTeam";
@@ -17,6 +18,7 @@ export default function Home() {
         <Price />
         <CallAction />
         <Reviews />
+        <FAQ />
       </main>
     </>
   );
