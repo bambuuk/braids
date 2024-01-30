@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Map = () => {
   return (
-    <div className='w-full h-[447px] mt-[150px]'>
+    <div id="map" className='w-full h-[447px] mt-[150px]'>
       <Image
         src="/map.png"
         width={1440}

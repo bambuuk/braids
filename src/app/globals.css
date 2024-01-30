@@ -24,6 +24,19 @@
   stroke: #1f0b0b;
 }
 
+.upToTop svg path,
+.upToTop svg rect {
+  transition: 0.15s all ease-in-out;
+}
+
+.upToTop:hover svg path {
+  stroke: #ffbe42;
+}
+
+.upToTop:hover svg rect {
+  fill: #493939;
+}
+
 .swiper-button-disabled svg path {
   stroke-width: 1.5;
 }

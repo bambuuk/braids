@@ -44,7 +44,7 @@ const Navigation = ({ color }: NavigationProps) => {
           </button>
         </li>
         <li>
-          <button className="group cursor-pointer" onClick={() => scrollToSection('contacts')}>
+          <button className="group cursor-pointer" onClick={() => scrollToSection('map')}>
             Contacts
             <Underline color={color} />
           </button>

@@ -208,3 +208,26 @@ export const Underline = ({ color = 'black' }: UnderlineProps) => {
   transition-all ease-in-out duration-275 h-0.5`}></span>
   )
 }
+
+export const UpToTopIcon = () => {
+  return (
+    <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
+      <g id="btn" filter="url(#filter0_d_1346_1621)">
+        <rect x="4" y="2" width="50" height="50" rx="10" fill="#FFBE42" shapeRendering="crispEdges" />
+        <path id="Vector" d="M16.7429 33.25L29.2429 20.75L41.7429 33.25" stroke="#1F0B0B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </g>
+      <defs>
+        <filter id="filter0_d_1346_1621" x="0" y="0" width="58" height="58" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+          <feOffset dy="2" />
+          <feGaussianBlur stdDeviation="2" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1346_1621" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1346_1621" result="shape" />
+        </filter>
+      </defs>
+    </svg>
+  )
+}

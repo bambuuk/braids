@@ -1,16 +1,24 @@
 import React from 'react'
 import Navigation from './Navigation'
 import SocialNetwork from './SocialNetwork'
+import { UpToTopIcon } from '@/assets/uiComponents'
+import { scrollToTop } from '@/utils/scrollToSection'
 
 const Footer = () => {
   return (
     <footer className='w-full pt-[70px] pb-[15px] bg-[#1F0B0B]'>
       <div className="max-w-[1240px] w-full h-full m-auto px-[16px] sm:[25px] md:px-[50px] xl:px-0">
         <div className='flex flex-col gap-[70px]'>
-          <div className='flex flex-col gap-[30px] items-center'>
+          <div className='flex flex-col gap-[30px] items-center relative'>
             <h2 className='text-[#FFBE42] font-outfit text-[24px] font-black leading-normal'>Braid Space</h2>
             <Navigation color='yellow' />
             <SocialNetwork place="footer" />
+            <div
+              onClick={scrollToTop}
+              className='upToTop absolute bottom-0 md:bottom-auto md:top-[50%] md:translate-y-[-50%] right-0 w-[30px] h-[30px] lg:w-[50px] lg:h-[50px] cursor-pointer'
+            >
+              <UpToTopIcon />
+            </div>
           </div>
 
           <div className='mt-[15px] text-[#FFBE42] font-raleway text-sm font-normal flex flex-col gap-[16px] 
