@@ -1,57 +1,52 @@
 'use client';
 
+import { Underline } from "@/assets/uiComponents";
 import { scrollToSection } from "@/utils/scrollToSection";
 
-const Navigation = () => {
+interface NavigationProps {
+  color: 'black' | 'yellow';
+}
+
+const Navigation = ({ color }: NavigationProps) => {
+  const mainColor = color === 'black' ? '#1F0B0B' : '#FFBE42';
+
   return (
-    <nav className="hidden lg:block">
-      <ul className="flex gap-[40px] text-base text-[#1F0B0B] font-outfit font-normal">
+    <nav className="">
+      <ul className={`flex flex-wrap gap-x-[48px] gap-y-[30px] sm:gap-[40px] justify-center text-base text-[${mainColor}] font-outfit font-normal`}>
         <li>
           <button className="group cursor-pointer" onClick={() => scrollToSection('main')}>
             Main
-            <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
-                  transition-all ease-in-out duration-275 h-0.5">
-            </span>
+            <Underline color={color} />
           </button>
         </li>
         <li>
           <button className="group cursor-pointer" onClick={() => scrollToSection('team')}>
             Team
-            <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
-                  transition-all ease-in-out duration-275 h-0.5">
-            </span>
+            <Underline color={color} />
           </button>
         </li>
         <li>
           <button className="group cursor-pointer" onClick={() => scrollToSection('price')}>
             Price
-            <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
-                  transition-all ease-in-out duration-275 h-0.5">
-            </span>
+            <Underline color={color} />
           </button>
         </li>
         <li>
           <button className="group cursor-pointer" onClick={() => scrollToSection('reviews')}>
             Reviews
-            <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
-                  transition-all ease-in-out duration-275 h-0.5">
-            </span>
+            <Underline color={color} />
           </button>
         </li>
         <li>
           <button className="group cursor-pointer" onClick={() => scrollToSection('faq')}>
             FAQ
-            <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
-                  transition-all ease-in-out duration-275 h-0.5">
-            </span>
+            <Underline color={color} />
           </button>
         </li>
         <li>
           <button className="group cursor-pointer" onClick={() => scrollToSection('contacts')}>
             Contacts
-            <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
-                  transition-all ease-in-out duration-275 h-0.5">
-            </span>
+            <Underline color={color} />
           </button>
         </li>
       </ul>

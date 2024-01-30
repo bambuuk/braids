@@ -6,6 +6,8 @@ import {
   BurgerMenu
 } from "@/assets/uiComponents";
 import { scrollToSection } from "@/utils/scrollToSection";
+import Navigation from "./Navigation";
+import SocialNetwork from "./SocialNetwork";
 
 const Header = () => {
   return (
@@ -18,82 +20,13 @@ const Header = () => {
             Braid Space
           </div>
 
-          <nav className="hidden lg:block">
-            <ul className="flex gap-[40px] text-base text-[#1F0B0B] font-outfit font-normal">
-              <li>
-                <button className="group cursor-pointer" onClick={() => scrollToSection('main')}>
-                  Main
-                  <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
-                  transition-all ease-in-out duration-275 h-0.5">
-                  </span>
-                </button>
-              </li>
-              <li>
-                <button className="group cursor-pointer" onClick={() => scrollToSection('team')}>
-                  Team
-                  <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
-                  transition-all ease-in-out duration-275 h-0.5">
-                  </span>
-                </button>
-              </li>
-              <li>
-                <button className="group cursor-pointer" onClick={() => scrollToSection('price')}>
-                  Price
-                  <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
-                  transition-all ease-in-out duration-275 h-0.5">
-                  </span>
-                </button>
-              </li>
-              <li>
-                <button className="group cursor-pointer" onClick={() => scrollToSection('reviews')}>
-                  Reviews
-                  <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
-                  transition-all ease-in-out duration-275 h-0.5">
-                  </span>
-                </button>
-              </li>
-              <li>
-                <button className="group cursor-pointer" onClick={() => scrollToSection('faq')}>
-                  FAQ
-                  <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
-                  transition-all ease-in-out duration-275 h-0.5">
-                  </span>
-                </button>
-              </li>
-              <li>
-                <button className="group cursor-pointer" onClick={() => scrollToSection('contacts')}>
-                  Contacts
-                  <span className="block max-w-full bg-transparent group-hover:bg-[#1F0B0B] 
-                  transition-all ease-in-out duration-275 h-0.5">
-                  </span>
-                </button>
-              </li>
-            </ul>
-          </nav>
+          <div className="hidden lg:block">
+            <Navigation color={'black'} />
+          </div>
 
           <div className="flex items-center gap-[32px]">
-            <div className="hidden sm:flex gap-5 px-2">
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                className="social__header-link w-[32px] h-[32px] flex items-center"
-              >
-                <HeaderFacebookIcon />
-              </a>
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                className="social__header-link w-[32px] h-[32px] flex items-center"
-              >
-                <HeaderInstagramIcon />
-              </a>
-              <a
-                href="https://www.tiktok.com/"
-                className="social__header-link w-[32px] h-[32px] flex items-center"
-                target="_blank"
-              >
-                <HeaderTiktokIcon />
-              </a>
+            <div className="hidden sm:block">
+              <SocialNetwork place="header" />
             </div>
 
             <div className="block lg:hidden w-[44px] h-[44px]">

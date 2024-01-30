@@ -11,6 +11,19 @@
   fill: #b7b7b7;
 }
 
+.social__footer-link svg rect {
+  transition: all 0.2s linear;
+  fill: #1f0b0b;
+}
+
+.social__footer-link:hover svg rect {
+  fill: #b7b7b7;
+}
+
+.social__footer-link:hover svg path {
+  stroke: #1f0b0b;
+}
+
 .swiper-button-disabled svg path {
   stroke-width: 1.5;
 }

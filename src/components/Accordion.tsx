@@ -31,9 +31,9 @@ const Accordion = ({ title, answer }: AccordionProps) => {
             <path
               d="M6.27246 9L12.2725 15L18.2725 9"
               stroke="#1F0B0B"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="group-hover:stroke-2 transition-all ease-in-out duration-300"
             />
           </svg>
