@@ -21,9 +21,6 @@ const useSuccessPopupControl = () => {
   const handleCloseSuccessPopup = (
     e: MouseEvent<HTMLButtonElement | HTMLDialogElement>
   ) => {
-    const header = document.querySelector("header") as HTMLElement;
-    const callAction = document.querySelector("#call-action") as HTMLElement;
-
     if (e.target === e.currentTarget) {
       (
         document.getElementById("success-call-order") as HTMLDialogElement

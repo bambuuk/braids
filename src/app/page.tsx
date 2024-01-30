@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Main from "@/components/Main";
 import OurTeam from "@/components/OurTeam";
 import Price from "@/components/Price";
+import Reviews from "@/components/Reviews";
 import RunningRow from "@/components/RunningRow";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <RunningRow />
         <Price />
         <CallAction />
+        <Reviews />
       </main>
     </>
   );

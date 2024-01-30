@@ -76,3 +76,27 @@ export const price = [
     img: "/braidExamples/zizi-braid.png",
   },
 ];
+
+export const reviews = [
+  {
+    img: "/reviews/veronika.jpg",
+    name: "Veronika",
+    descr: `Braid Space is more than just a salon; it's a place where masterpieces are created! 
+    The artisans here not only have high qualifications but also bring a creative approach to their work. 
+    Impressed with the results, I will gladly return for new braids.`,
+  },
+  {
+    img: "/reviews/polina.jpg",
+    name: "Polina",
+    descr: `Fantastic braiding salon! Professional approach and attention to detail. 
+    My braids not only look stylish but are also easy to maintain. I highly recommend 
+    Braid Space to anyone who values high quality!`,
+  },
+  {
+    img: "/reviews/ann.jpg",
+    name: "Ann",
+    descr: `Extremely pleased with my visit to Braid Space! The professional artisans 
+    created wonderful braids that captivate with their beauty. The salon's atmosphere 
+    is very cozy, and the service is top-notch.`,
+  },
+];

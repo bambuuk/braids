@@ -2,7 +2,7 @@
 import clsx from "clsx";
 import Image from "next/image";
 import { MouseEventHandler, useState } from "react";
-import { Price } from "@/assets/types";
+import { Price, Review } from "@/assets/types";
 
 interface PriceCardProps {
   priceInfo: Price;

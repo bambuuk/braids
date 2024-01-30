@@ -5,3 +5,9 @@ export interface Price {
   price: string;
   img: string;
 }
+
+export interface Review {
+  img: string;
+  name: string;
+  descr: string;
+}
