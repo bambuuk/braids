@@ -29,6 +29,12 @@ const config: Config = {
         outfit: ["var(--font-outfit)"],
         raleway: ["var(--font-raleway)"],
       },
+      boxShadow: {
+        little: "0px 2px 4px 0px rgba(0, 0, 0, 0.25)",
+      },
+      content: {
+        location: 'url("/icons/location.png")',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
