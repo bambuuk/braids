@@ -1,8 +1,9 @@
-import { MouseEvent } from "react";
+import { MouseEvent, SyntheticEvent } from "react";
 import CallActionForm from "./CallActionForm";
 
 interface CallPopupProps {
-  handleClose: (e: MouseEvent<HTMLButtonElement | HTMLDialogElement>) => void;
+  handleClose: (e: MouseEvent<HTMLButtonElement | HTMLDialogElement>
+    | SyntheticEvent<HTMLFormElement>) => void;
 }
 
 const CallActionPopup = ({ handleClose }: CallPopupProps) => {
@@ -19,7 +20,7 @@ const CallActionPopup = ({ handleClose }: CallPopupProps) => {
           bg-cover hover:bg-[url('/icons/hover-close-popup.svg')] transition-all">
         </button>
 
-        <CallActionForm />
+        <CallActionForm handleClose={handleClose} />
       </div>
     </dialog>
   )
