@@ -22,7 +22,7 @@ const PriceCard = ({ priceInfo }: PriceCardProps) => {
   return (
     <div>
       <div className="w-full h-full rounded-[10px]
-    sm:hover:bg-[#1F0B0B] transition-all ease-in-out duration-700 group cursor-grab">
+    hover:bg-[#1F0B0B] transition-all ease-in-out duration-700 group cursor-grab">
         <div className="w-full relative">
           <div className={clsx(
             `flex flex-col gap-[16px] md:gap-5 p-[16px] md:p-[30px] w-full h-full rounded-[10px]
