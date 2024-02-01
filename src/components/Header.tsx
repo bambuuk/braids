@@ -1,13 +1,11 @@
 'use client'
 import {
-  HeaderTiktokIcon,
-  HeaderInstagramIcon,
-  HeaderFacebookIcon,
   BurgerMenu
 } from "@/assets/uiComponents";
-import { scrollToSection } from "@/utils/scrollToSection";
 import Navigation from "./Navigation";
 import SocialNetwork from "./SocialNetwork";
+import Image from "next/image";
+import Sidebar from "./Sidebar";
 
 const Header = () => {
   return (
@@ -29,9 +27,7 @@ const Header = () => {
               <SocialNetwork place="header" />
             </div>
 
-            <div className="block lg:hidden w-[44px] h-[44px]">
-              <BurgerMenu />
-            </div>
+            <Sidebar />
           </div>
         </div>
       </div>
