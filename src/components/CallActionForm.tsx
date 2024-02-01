@@ -2,11 +2,9 @@
 
 import SuccessCallPopup from "./SuccessCallPopup";
 import useSuccessPopupControl from "@/hooks/useSuccessPopupControl";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { z } from 'zod';
 import { InputMask } from 'primereact/inputmask';
-import { zodResolver } from '@hookform/resolvers/zod';
 import { HandleCloseCallPopup } from "@/hooks/useCallPopupControl";
+import useFormValidation from "@/hooks/useFormValidation";
 
 interface CallActionFormProps {
   handleClose?: <T extends HandleCloseCallPopup>(e: T) => void;
@@ -18,25 +16,13 @@ const CallActionForm = ({ handleClose }: CallActionFormProps) => {
     handleCloseSuccessPopup,
   } = useSuccessPopupControl();
 
-  const schema = z.object({
-    name: z.string().min(2).max(30),
-    phone: z.string().min(10),
-    terms: z.literal(true, {
-      errorMap: () => ({ message: "You must accept Terms" }),
-    }),
-  });
-
-  type FormSchemaType = z.infer<typeof schema>;
-
-  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<FormSchemaType>({ resolver: zodResolver(schema) });
-
-  const submitData: SubmitHandler<FormSchemaType> = (data, e) => {
-    handleOpenSuccessPopup();
-    if (handleClose && e) {
-      handleClose(e);
-      reset();
-    }
-  }
+  const {
+    register,
+    handleSubmit,
+    errors,
+    isSubmitting,
+    submitData
+  } = useFormValidation({ handleClose, handleOpenSuccessPopup });
 
   return (
     <>
@@ -93,7 +79,7 @@ const CallActionForm = ({ handleClose }: CallActionFormProps) => {
             </div>
             <label
               htmlFor="terms"
-              className={`text-[#EEE] font-raleway text-sm font-light ${errors.terms ? 'text-[#FF8484]' : ''}`}
+              className={`text-[#EEE] font-raleway text-sm font-light leading-4 ${errors.terms ? 'text-[#FF8484]' : ''}`}
             >
               I accept the terms of data processing
             </label>
