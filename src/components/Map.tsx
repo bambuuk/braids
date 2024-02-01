@@ -1,33 +1,36 @@
 'use client';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import Image from 'next/image'
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const Map = () => {
   const { isMobile, isSmallTablet, isTablet, isDesktop } = useMediaQuery();
-  const imgRef = useRef("/map-tablet.png");
+  const [imgSrc, setImgSrc] = useState("/map-tablet.png");
 
   useEffect(() => {
-    imgRef.current = isDesktop
-      ? "/map.png"
-      : isSmallTablet
-        ? "/map-tablet.png"
-        : isMobile
-          ? "/map-mobile.png"
-          : "/map.png";
-  }, [isMobile, isSmallTablet, isTablet, isDesktop])
+    setImgSrc(
+      isDesktop
+        ? "/map.png"
+        : isSmallTablet
+          ? "/map-tablet.png"
+          : isMobile
+            ? "/map-mobile.png"
+            : "/map.png"
+    );
+  }, [isMobile, isSmallTablet, isTablet, isDesktop]);
 
   return (
     <div id="map" className='w-full h-[447px] mt-[80px] md:mt-[100px] lg:mt-[150px] relative'>
       <Image
-        src={imgRef.current}
+        src={imgSrc}
         width={1440}
         height={447}
         alt="Map"
         className='w-full h-full object-cover'
       />
       <div
-        className='absolute z-10 p-[30px] bottom-[170px] left-[20px] rounded-[20px] bg-[#1F0B0B] opacity-80
+        className='absolute z-10 p-[20px] sm:p-[30px] bottom-[40%] sm:bottom-[170px] left-[10px] 
+        sm:left-[20px] rounded-[20px] bg-[#1F0B0B] opacity-80
         shadow-little flex flex-col gap-5 font-outfit text-[20px] font-semibold leading-[100%]'
       >
         <div className="flex items-center gap-[10px]">

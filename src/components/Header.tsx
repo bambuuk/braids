@@ -1,10 +1,5 @@
-'use client'
-import {
-  BurgerMenu
-} from "@/assets/uiComponents";
 import Navigation from "./Navigation";
 import SocialNetwork from "./SocialNetwork";
-import Image from "next/image";
 import Sidebar from "./Sidebar";
 
 const Header = () => {
