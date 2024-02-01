@@ -52,8 +52,9 @@ const CallActionForm = ({ handleClose }: CallActionFormProps) => {
               name="name"
               type="text"
               placeholder="Name"
-              className="mt-[30px] pb-[10px] border-b border-b-[#eee] bg-transparent placeholder:text-[#B7B7B7] 
-              text-[#EEE] font-outfit text-sm sm:text-base font-normal outline-none w-full"
+              className={`mt-[30px] pb-[10px] border-b border-b-[#eee] bg-transparent placeholder:text-[#B7B7B7] 
+              text-[#EEE] font-outfit text-sm sm:text-base font-normal outline-none w-full
+              ${errors.name ? 'text-[#FF8484] border-b-[#FF8484] placeholder:text-[#FF8484]' : ''}`}
             />
             {errors.name && <span className="text-[#FF8484] font-outfit text-[12px] font-normal">{errors.name.message}</span>}
           </div>
@@ -65,8 +66,9 @@ const CallActionForm = ({ handleClose }: CallActionFormProps) => {
               id="phone"
               mask="+38 (999) 99-99-999"
               placeholder="Phone number"
-              className="w-full mt-[30px] pb-[10px] border-b border-b-[#eee] bg-transparent placeholder:text-[#B7B7B7] 
-              text-[#EEE] font-outfit text-sm sm:text-base font-normal outline-none"></InputMask>
+              className={`w-full mt-[30px] pb-[10px] border-b border-b-[#eee] bg-transparent placeholder:text-[#B7B7B7] 
+              text-[#EEE] font-outfit text-sm sm:text-base font-normal outline-none
+              ${errors.phone ? 'text-[#FF8484] border-b-[#FF8484] placeholder:text-[#FF8484]' : ''}`}></InputMask>
             {errors.phone && <span className="text-[#FF8484] font-outfit text-[12px] font-normal">{errors.phone.message}</span>}
           </div>
 
@@ -77,9 +79,10 @@ const CallActionForm = ({ handleClose }: CallActionFormProps) => {
                 name="terms"
                 type="checkbox"
                 id="terms"
-                className="rounded-full checkbox border-[#EEEEEE]
+                className={`rounded-full checkbox border-[#EEEEEE]
                 checked:border-[#FFBE42] [--chkbg:theme(mytheme.secondary)] checked:bg-[url('/icons/check-alt.svg')] 
-                bg-cover [--chkfg:theme(mytheme.success)] w-[24px] h-[24px]"
+                bg-cover [--chkfg:theme(mytheme.success)] w-[24px] h-[24px]
+                ${errors.terms ? 'border-[#FF8484]' : ''}`}
               />
               {
                 errors.terms &&
@@ -90,7 +93,7 @@ const CallActionForm = ({ handleClose }: CallActionFormProps) => {
             </div>
             <label
               htmlFor="terms"
-              className="text-[#EEE] font-raleway text-sm font-light"
+              className={`text-[#EEE] font-raleway text-sm font-light ${errors.terms ? 'text-[#FF8484]' : ''}`}
             >
               I accept the terms of data processing
             </label>
