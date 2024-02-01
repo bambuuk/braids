@@ -48,3 +48,39 @@
 .no-scroll {
   overflow-y: hidden;
 }
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background: #1f0b0b;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper .leaflet-popup-content {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper .leaflet-popup-content div {
+  width: 250px;
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper .leaflet-popup-content a {
+  margin-top: 20px;
+  color: #eee;
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper .leaflet-popup-content .second {
+  margin-top: 20px;
+}
+
+.leaflet-popup-close-button span {
+  font-size: 20px;
+  padding-right: 10px;
+}
