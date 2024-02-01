@@ -1,9 +1,8 @@
-import { MouseEvent, SyntheticEvent } from "react";
 import CallActionForm from "./CallActionForm";
+import { HandleCloseCallPopup } from "@/hooks/useCallPopupControl";
 
 interface CallPopupProps {
-  handleClose: (e: MouseEvent<HTMLButtonElement | HTMLDialogElement>
-    | SyntheticEvent<HTMLFormElement>) => void;
+  handleClose: <T extends HandleCloseCallPopup>(e: T) => void;
 }
 
 const CallActionPopup = ({ handleClose }: CallPopupProps) => {

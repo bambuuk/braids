@@ -4,7 +4,7 @@ const useSuccessPopupControl = () => {
   const [isOpenSuccessPopup, setIsOpenSuccessPopup] = useState(false);
   let timeoutId: ReturnType<typeof setTimeout>;
 
-  const handleOpenSuccessPopup = (e: React.SyntheticEvent<HTMLFormElement>) => {
+  const handleOpenSuccessPopup = () => {
     (
       document.getElementById("success-call-order") as HTMLDialogElement
     ).showModal();
