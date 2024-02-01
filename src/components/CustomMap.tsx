@@ -39,7 +39,7 @@ const CustomMap = () => {
               alt=""
               className='w-6 h-6 object-cover'
             />
-            <span className='text-[#EEEEEE] text-[20px] font-semibold leading-[100%]'>Kyiv, Myru Street, 25-a</span>
+            <span className='text-[#EEEEEE] text-[16px] font-semibold leading-[100%]'>Kyiv, Myru Street, 25-a</span>
           </div>
           <div className="flex items-center gap-[10px] font-outfit">
             <Image
