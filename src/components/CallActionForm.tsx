@@ -32,9 +32,9 @@ const CallActionForm = ({ handleClose }: CallActionFormProps) => {
 
   const submitData: SubmitHandler<FormSchemaType> = (data, e) => {
     handleOpenSuccessPopup();
-    reset();
     if (handleClose && e) {
       handleClose(e);
+      reset();
     }
   }
 
@@ -50,8 +50,6 @@ const CallActionForm = ({ handleClose }: CallActionFormProps) => {
             <input
               {...register("name")}
               name="name"
-              // value={name}
-              // onChange={(e) => setName(e.target.value)}
               type="text"
               placeholder="Name"
               className="mt-[30px] pb-[10px] border-b border-b-[#eee] bg-transparent placeholder:text-[#B7B7B7] 
@@ -60,23 +58,12 @@ const CallActionForm = ({ handleClose }: CallActionFormProps) => {
             {errors.name && <span className="text-[#FF8484] font-outfit text-[12px] font-normal">{errors.name.message}</span>}
           </div>
 
-          {/* <input
-            {...register("phone")}
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            type="tel"
-            placeholder="Phone number"
-            className="mt-[30px] pb-[10px] border-b border-b-[#eee] bg-transparent placeholder:text-[#B7B7B7] 
-              text-[#EEE] font-outfit text-sm sm:text-base font-normal outline-none"
-          /> */}
           <div className="w-full">
             <InputMask
               {...register("phone")}
               name="phone"
               id="phone"
               mask="+38 (999) 99-99-999"
-              // value={phone}
-              // onChange={(e) => setPhone(e.target.value)}
               placeholder="Phone number"
               className="w-full mt-[30px] pb-[10px] border-b border-b-[#eee] bg-transparent placeholder:text-[#B7B7B7] 
               text-[#EEE] font-outfit text-sm sm:text-base font-normal outline-none"></InputMask>
@@ -90,8 +77,6 @@ const CallActionForm = ({ handleClose }: CallActionFormProps) => {
                 name="terms"
                 type="checkbox"
                 id="terms"
-                // checked={check}
-                // onChange={(e) => setCheck(e.target.checked)}
                 className="rounded-full checkbox border-[#EEEEEE]
                 checked:border-[#FFBE42] [--chkbg:theme(mytheme.secondary)] checked:bg-[url('/icons/check-alt.svg')] 
                 bg-cover [--chkfg:theme(mytheme.success)] w-[24px] h-[24px]"
