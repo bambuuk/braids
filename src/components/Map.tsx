@@ -30,7 +30,7 @@ const Map = () => {
       />
       <div
         className='absolute z-10 p-[20px] sm:p-[30px] bottom-[40%] sm:bottom-[170px] left-[10px] 
-        sm:left-[20px] rounded-[20px] bg-[#1F0B0B] opacity-80
+        sm:left-[15%] rounded-[20px] bg-[#1F0B0B] opacity-80
         shadow-little flex flex-col gap-5 font-outfit text-[20px] font-semibold leading-[100%]'
       >
         <div className="flex items-center gap-[10px]">
