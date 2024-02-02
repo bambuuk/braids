@@ -26,7 +26,7 @@ const Main = () => {
           leading-[100%]">
             <span className="mt-[15px] sm:mt-0 lg:mt-5 flex justify-start items-center lg:items-start">for</span>
             <Image
-              src='/main-girl.png'
+              src='/main-girl.svg'
               alt="Girl"
               width={500}
               height={500}
